@@ -10,7 +10,7 @@ COPY db/sequelize.js /app/db/sequelize
 RUN npm install
 ENV MYSQL_USERNAME=admin
 ENV MYSQL_ROOT_PASSWORD=hariharan7
-ENV MYSQL_DATABASE=clab
+ENV MYSQL_DATABASE=database-1
 ENV MYSQL_HOST=database-1.czwgmomcga5y.ap-southeast-1.rds.amazonaws.com
 ENV MYSQL_LOCAL_PORT=3306
 ENV MYSQL_DOCKER_PORT=3306
