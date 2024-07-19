@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Installing Docker...
+      - yum update -y
+      - yum install -y docker
+  pre_build:
+    commands:
+      - echo Logging in to DockerHub...
+      - echo Jayanthi@7 | docker login -u hariharan77 --password-stdin
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t my-app:v2 .
+
+artifacts:
+  files:
+    - '**/*'
